@@ -15,7 +15,9 @@ export class TutorialListComponent implements OnInit {
 
   constructor(private tutorialService: TutorialService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.retrieveTutorials();
+  }
 
   retrieveTutorials(): void {
     this.tutorialService.getAll().subscribe({
